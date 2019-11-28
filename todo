@@ -1,0 +1,17 @@
+CONCEPT
+
+HANDLE CONTENT ON SCREEN
+
+int array of int array pointing on an "object informations" structure for each pixel on the screen
+at the launch of the program each existing visual object is buffered to analyze from its colors and position
+of other pixels around to check for angle
+
+
+point to every pixel of existing objects in chain to quickly modify needed pixels and loop on it until all movements are made
+
+make sand pixel fall until it hits the ground or other sand pixel
+
+if pixel felt on top of other lonely pixel it drops to the right or left depending
+on velocity (random at first)
+
+
