@@ -1,0 +1,51 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/3fdf28bc/
+$(NAME)	Makefile	/^$(NAME): $(OBJ) Makefile$/;"	t
+$(OBJ_PATH)%.o	Makefile	/^$(OBJ_PATH)%.o: $(SRC_PATH)%.c $(INC)$/;"	t
+FLAG	Makefile	/^FLAG = -Wall -Wextra -Werror #-fsanitize=address$/;"	m
+INC	Makefile	/^INC = $(addprefix $(INC_PATH), $(INCLUDES))$/;"	m
+INCLUDES	Makefile	/^INCLUDES= sand.h$/;"	m
+INC_PATH	Makefile	/^INC_PATH = .\/includes\/$/;"	m
+NAME	Makefile	/^NAME= sand$/;"	m
+OBJ	Makefile	/^OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))$/;"	m
+OBJ_NAME	Makefile	/^OBJ_NAME = $(SOURCES:.c=.o)$/;"	m
+OBJ_PATH	Makefile	/^OBJ_PATH = .\/obj\/$/;"	m
+SAND_H	includes/sand.h	/^# define SAND_H$/;"	d
+SDL_apply_color_to_renderer	src/sdl_functions.c	/^void			SDL_apply_color_to_renderer(SDL_Color rgba, t_sdl *sdl)$/;"	f	typeref:typename:void
+SDL_init_img	src/sdl_functions.c	/^void			SDL_init_img(t_sdl *sdl)$/;"	f	typeref:typename:void
+SDL_init_renderer	src/sdl_functions.c	/^void			SDL_init_renderer(t_sdl *sdl)$/;"	f	typeref:typename:void
+SDL_init_window	src/sdl_functions.c	/^void			SDL_init_window(t_sdl *sdl)$/;"	f	typeref:typename:void
+SDL_load_texture	src/sdl_functions.c	/^SDL_Texture		*SDL_load_texture(t_sdl *sdl, SDL_Renderer *renderer,$/;"	f	typeref:typename:SDL_Texture *
+SDL_render_clear	src/sdl_functions.c	/^void			SDL_render_clear(t_sdl *sdl, SDL_Renderer *renderer)$/;"	f	typeref:typename:void
+SDL_render_copy	src/sdl_functions.c	/^void			SDL_render_copy(t_sdl *sdl, SDL_Renderer *renderer,$/;"	f	typeref:typename:void
+SDL_render_target	src/sdl_functions.c	/^void			SDL_render_target(t_sdl *sdl, SDL_Renderer *renderer,$/;"	f	typeref:typename:void
+SOURCES	Makefile	/^SOURCES= main.c sdl_functions.c$/;"	m
+SRC	Makefile	/^SRC = $(addprefix $(SRC_PATH), $(SOURCES))$/;"	m
+SRC_PATH	Makefile	/^SRC_PATH = .\/src\/$/;"	m
+all	Makefile	/^all:$/;"	t
+clean	Makefile	/^clean:$/;"	t
+clean_before_exiting	src/main.c	/^void			clean_before_exiting(t_sdl *sdl, t_pixel ***pixel)$/;"	f	typeref:typename:void
+failure_exit_program	src/sdl_functions.c	/^void			failure_exit_program(char *error, t_sdl *sdl)$/;"	f	typeref:typename:void
+fclean	Makefile	/^fclean: clean$/;"	t
+filled	includes/sand.h	/^	int				filled;$/;"	m	struct:s_pixel	typeref:typename:int
+init_pixel_tab	src/main.c	/^void			init_pixel_tab(t_pixel ***pixel)$/;"	f	typeref:typename:void
+main	src/main.c	/^int				main(void)$/;"	f	typeref:typename:int
+object	includes/sand.h	/^	struct s_object	*object;$/;"	m	struct:s_sdl	typeref:struct:s_object *
+re	Makefile	/^re: fclean all$/;"	t
+renderer	includes/sand.h	/^	SDL_Renderer	*renderer;$/;"	m	struct:s_sdl	typeref:typename:SDL_Renderer *
+s_object	includes/sand.h	/^typedef struct		s_object$/;"	s
+s_pixel	includes/sand.h	/^typedef struct		s_pixel$/;"	s
+s_sdl	includes/sand.h	/^typedef struct		s_sdl$/;"	s
+sand	includes/sand.h	/^	SDL_Texture		*sand;$/;"	m	struct:s_object	typeref:typename:SDL_Texture *
+t_object	includes/sand.h	/^}					t_object;$/;"	t	typeref:struct:s_object
+t_pixel	includes/sand.h	/^}					t_pixel;$/;"	t	typeref:struct:s_pixel
+t_sdl	includes/sand.h	/^}					t_sdl;$/;"	t	typeref:struct:s_sdl
+update_sand_on_screen	src/main.c	/^void			update_sand_on_screen(t_sdl *sdl, t_pixel ***pixel)$/;"	f	typeref:typename:void
+window	includes/sand.h	/^	SDL_Window		*window;$/;"	m	struct:s_sdl	typeref:typename:SDL_Window *
+window_h	includes/sand.h	/^	int				window_h;$/;"	m	struct:s_sdl	typeref:typename:int
+window_w	includes/sand.h	/^	int				window_w;$/;"	m	struct:s_sdl	typeref:typename:int
