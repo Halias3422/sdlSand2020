@@ -5,15 +5,26 @@
 #include <SDL2/SDL_image.h>
 #include <time.h>
 
+# define black (SDL_Color){0, 0, 0, 255}
+# define FPS 60
+# define frame_delay (1000 / FPS)
+
+typedef struct		s_sand
+{
+	SDL_Texture		*texture;
+	int				width;
+	int				height;
+}					t_sand;
+
 typedef struct		s_object
 {
-	SDL_Texture		*sand;
+	struct s_sand	*sand;
 }					t_object;
 
-typedef struct		s_pixel
+typedef struct		s_screen_content
 {
 	int				filled;
-}					t_pixel;
+}					t_screen_content;
 
 typedef struct		s_sdl
 {
@@ -21,13 +32,15 @@ typedef struct		s_sdl
 	SDL_Renderer	*renderer;
 	int				window_h;
 	int				window_w;
-	struct s_object	*object;
 }					t_sdl;
 
 //	MAIN_C
 
-void			clean_before_exiting(t_sdl *sdl, t_pixel ***pixel);
 
+//	GAME_LOOP_C
+
+void			game_loop(t_sdl *sdl, t_object *object, t_screen_content
+				***screen_content);
 //	SDL_FUNCTIONS_C
 
 void			failure_exit_program(char *error, t_sdl *sdl);

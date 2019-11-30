@@ -4,7 +4,7 @@ SRC_PATH = ./src/
 OBJ_PATH = ./obj/
 INC_PATH = ./includes/
 
-SOURCES= main.c sdl_functions.c
+SOURCES= new_main.c game_loop.c sdl_functions.c
 INCLUDES= sand.h
 OBJ_NAME = $(SOURCES:.c=.o)
 
@@ -12,7 +12,7 @@ INC = $(addprefix $(INC_PATH), $(INCLUDES))
 SRC = $(addprefix $(SRC_PATH), $(SOURCES))
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
 
-FLAG = -Wall -Wextra -Werror -fsanitize=address
+FLAG = -Wall -Wextra -fsanitize=address
 
 all:
 	make $(NAME)

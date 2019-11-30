@@ -1,4 +1,4 @@
-#include "../includes/sand.h"
+#include "sand.h"
 
 void			clean_before_exiting(t_sdl *sdl, t_pixel ***pixel)
 {
